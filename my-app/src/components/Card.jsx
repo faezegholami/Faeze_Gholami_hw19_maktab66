@@ -40,9 +40,10 @@ export default function SingleCard() {
           </div>
           <div className="name">
             Border Countries:
-            {state.borders.map(((item,index)=>{
+            {state.border? state.borders.map(((item,index)=>{
               return <Link className="linkes" to={`../singlecard/${item}`} key={index}>{item}</Link>
-            }))}
+            })):(<label>No border</label>)
+          }{''}
             
           </div>
         </div>
