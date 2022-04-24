@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         {data.map((item ,index)=>
-        <Route path={`singlecard/${item.alpha2Code}`} element={<SingleCard />} key={index} />
+        <Route path={`singlecard`} element={<SingleCard />} key={index} />
           
           )}
         <Route path="/" element={<ActionAreaCard />} />

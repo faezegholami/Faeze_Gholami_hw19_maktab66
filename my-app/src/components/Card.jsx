@@ -1,14 +1,25 @@
 import * as React from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { GetDataContext } from "../context/GetDataContext";
 
 export default function SingleCard() {
- 
-  
+  const { data } = React.useContext(GetDataContext);
+  console.log(data.map(e=>e.alpha3Code));
   let state = useLocation();
-  state = state.state;
-  
+ 
+  const [map, setMap] = React.useState(state.state);
+
+  const handleClick = (border) => {
+    const findItem = data.map((name) =>(name.alpha3Code==border.item))
+      console.log(findItem);
+      console.log(data);
+      setMap(findItem)
+    
+    };
+    console.log(map)
+
   let navigate = useNavigate();
 
   const goHomeBtn = () => navigate("/");
@@ -20,30 +31,45 @@ export default function SingleCard() {
 
       <div className="cardHolder">
         <div>
-          <img src={state.flags.png} alt="" />
+          <img src={map.flags.png} alt="" />
         </div>
         <div>
-          <h1 className="name">{state.name}</h1>
+          <h1 className="name">{map.name}</h1>
           <div className="textHolder">
             <div>
-              <p>Native Name: {state.nativeName}</p>
-              <p>Population: {state.population}</p>
-              <p>Region: {state.region}</p>
-              <p>Sub Region: {state.subregion}</p>
-              <p>Capital: {state.capital}</p>
+              <p>Native Name: {map.nativeName}</p>
+              <p>Population: {map.population}</p>
+              <p>Region: {map.region}</p>
+              <p>Sub Region: {map.subregion}</p>
+              <p>Capital: {map.capital}</p>
             </div>
             <div>
-              <p>Top Level Domain: {state.topLevelDomain}</p>
-              <p>Currencies: {state.currencies.map((e) => e.code)}</p>
-              <p>Languages: {state.languages.map((r) => `${r.name},`)}</p>
+              <p>Top Level Domain: {map.topLevelDomain}</p>
+              <p>Currencies: {map.currencies.map((e) => e.code)}</p>
+              <p>Languages: {map.languages.map((r) => `${r.name},`)}</p>
             </div>
           </div>
           <div className="name">
             Border Countries:
-            {state.border? state.borders.map(((item,index)=>{
-              return <Link className="linkes" to={`../singlecard/${item}`} key={index}>{item}</Link>
-            })):(<label>No border</label>)
-          }{''}
+            {map.borders ? (
+              map.borders.map((item, index) => {
+              return data.map(el=>{
+                if(el.alpha3Code===item){
+                  return(
+                    <button
+                    className="linkes"
+                    onClick={() => handleClick({item})}
+                    key={index}
+                  >
+                    {el.name}
+                  </button>
+                  )
+                }
+              }) 
+              })
+            ) : (
+              <label>No border</label>
+            )}
             
           </div>
         </div>

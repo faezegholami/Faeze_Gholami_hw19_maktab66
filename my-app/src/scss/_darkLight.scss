@@ -22,3 +22,18 @@
     
 }
 
+.darkEl input{
+    background-color: hsl(207,26%,17%);
+    border: none;
+    box-shadow: 1px 1px 5px 1px gray;
+
+}
+
+.darkEl select{
+    background-color: hsl(207,26%,17%);
+    color: hsl(0, 0%, 100%);
+}
+
+.darkEl input::placeholder{
+    color: hsl(0, 0%, 100%);
+}
