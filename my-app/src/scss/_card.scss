@@ -1,0 +1,43 @@
+.cardHolder{
+    display: flex;
+    justify-content: center;
+}
+.cardHolder img{
+    width: 400px;
+}
+
+.textHolder{
+    display: flex;
+    margin-left: 100px;
+    font-size: 16px;
+}
+
+button{
+    border: none;
+    font-size: 20px;
+    margin: 5px;
+    background-color: transparent;
+    box-shadow: 1px 1px 5px 1px;
+    border-radius: 5px;
+}
+
+.card{
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+
+.back{
+    margin: 6%;
+    padding: 0 2%;
+}
+.name{
+    margin-left: 100px;
+
+}
+
+.linkes{
+    padding:0 10px;
+    margin:0 10px;
+    box-shadow: 1px 1px 2px 1px;
+}

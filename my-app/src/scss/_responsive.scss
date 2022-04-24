@@ -1,0 +1,48 @@
+@media only screen and (max-width: 376px) {
+  header {
+    width: 100% !important;
+    height: 50px !important;
+    font-size: 5px !important;
+  }
+
+  header p {
+    padding: 10px !important;
+    font-size: 10px;
+  }
+
+  header button {
+    font-size: 4px !important;
+  }
+
+  .card {
+    width: 90% !important;
+  }
+  .cardHolder {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardHolder img{
+      width: 300px !important;
+  }
+  .textHolder {
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0 !important;
+  }
+  .name{
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0 !important;
+  }
+  .holdMainCard {
+    flex-direction: column;
+  }
+
+  .everyCard {
+    width: 90% !important;
+  }
+
+  #root{
+      width: 100% !important;
+  }
+}
