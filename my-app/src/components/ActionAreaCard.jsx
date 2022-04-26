@@ -14,7 +14,7 @@ export default function ActionAreaCard() {
   };
 
   const filterByRegion = async region => {
-    if(region == '') return
+    if(region === '') return
     const res = await fetch(`https://restcountries.com/v2/region/${region}`)
     console.log(res);
     const data = await res.json()
@@ -38,7 +38,7 @@ export default function ActionAreaCard() {
               Filter by Region
             </option>
             <option value="africa">Africa</option>
-            <option value="america">America</option>
+            <option value="americas">America</option>
             <option value="asia">Asia</option>
             <option value="europe">Europe</option>
             <option value="oceania">Oceania</option>
@@ -54,10 +54,10 @@ export default function ActionAreaCard() {
             key={index}
           >
             <img src={item.flags.png} alt="" />
-            <h4>Name: {item.name}</h4>
-            <p>Population: {item.population}</p>
-            <p>Region: {item.region}</p>
-            <p>Capital: {item.capital}</p>
+            <h4><span>Name :</span> {item.name}</h4>
+            <p><span>Population:</span> {item.population}</p>
+            <p><span>Region:</span> {item.region}</p>
+            <p><span>Capital:</span> {item.capital}</p>
           </Link>
         ))}
       </div>

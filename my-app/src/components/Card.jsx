@@ -12,7 +12,7 @@ export default function SingleCard() {
   const [map, setMap] = React.useState(state.state);
 
   const handleClick = (border) => {
-    const findItem = data.map((name) =>(name.alpha3Code==border.item))
+    const findItem = data.find((name) =>(name.alpha3Code===border.item))
       console.log(findItem);
       console.log(data);
       setMap(findItem)

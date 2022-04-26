@@ -1,39 +1,51 @@
-.darkEl{
+.darkEl {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(207, 26%, 17%);
+  box-shadow: 1px 1px 5px 1px hsl(200, 15%, 8%);
+
+  button {
     color: hsl(0, 0%, 100%);
-    background-color: hsl(207,26%,17%);
-    box-shadow: 1px 1px 5px 1px hsl(200,15%,8%);
-
-}
-
-.lightEl{
-    color: hsl(200,15%,8%);
-    background-color: hsl(0, 0%, 98%);
-    box-shadow: 1px 1px 5px 1px gray;
-
-}
-
-.darkEl button{
+  }
+  a {
     color: hsl(0, 0%, 100%);
-
-}
-
-.darkEl a{
+  }
+  input {
+    background-color: hsl(207, 26%, 17%);
+    border: none;
+    box-shadow: 1px 1px 5px 1px black;
+  }
+  input::placeholder {
     color: hsl(0, 0%, 100%);
     
-}
-
-.darkEl input{
-    background-color: hsl(207,26%,17%);
-    border: none;
-    box-shadow: 1px 1px 5px 1px gray;
-
-}
-
-.darkEl select{
-    background-color: hsl(207,26%,17%);
+  }
+  select {
+    background-color: hsl(207, 26%, 17%);
     color: hsl(0, 0%, 100%);
+  }
+
+  .linkes{
+    background-color: hsl(207, 26%, 17%);
+    box-shadow: 1px 1px 5px 1px black;
+  }
+
+  .back{
+    background-color: hsl(207, 26%, 17%);
+    box-shadow: 1px 1px 5px 1px black;
+  }
+
+  .everyCard{
+    box-shadow: 1px 1px 5px 1px black;
+
+  }
+
+  header{
+    background-color: hsl(209, 23%, 22%);
+    box-shadow: 1px 1px 5px 1px black;
+  }
 }
 
-.darkEl input::placeholder{
-    color: hsl(0, 0%, 100%);
+.lightEl {
+  color: hsl(200, 15%, 8%);
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 1px 1px 5px 1px gray;
 }
